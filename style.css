@@ -1,5 +1,4 @@
 :root {
-  --fuenteHeading: "Roboto", sans-serif;
   --fuenteParrafos: "Quicksand", sans-serif;
   --primario: #00e9d8;
   --secundario: #2769ec;
@@ -161,7 +160,15 @@ body {
   line-height: 30px;
   text-align: center;
 }
+.frase {
+  font-size: 25px;
+  font-family: var(--fuenteParrafos);
+  color: var(--blanco);
+}
 @media only screen and (min-width: 768px) {
+  .frase {
+    font-size: 35px;
+  }
   .ocultar {
     display: flex;
   }
