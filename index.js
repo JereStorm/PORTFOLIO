@@ -8,6 +8,13 @@ Soy una persona proactiva, con un gran sentido de la responsabilidad, con vocaci
 Mi objetivo es adquirir experiencia laboral y consolidarme en un equipo de trabajo donde pueda desarrollarme y crecer profesionalmente.
 `;
 
+let btnMenu = document.querySelector("#btn-menu")
+btnMenu.addEventListener("click", mostrarMenu);
+
+function mostrarMenu() {
+    let menu = document.querySelector("#menu");
+    menu.classList.toggle("ocultar")
+}
 
 
 

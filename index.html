@@ -13,7 +13,8 @@
     <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew&family=Quicksand&display=swap" rel="
+        stylesheet">
 </head>
 
 <body>
@@ -22,15 +23,16 @@
             <h1 class="header__title" id="textEl">
                 < <span> JS </span> />
             </h1>
-            <nav>
-                <button class="btn-menu"><i class="bi bi-list"></i></button>
-                <ul class="nav">
-                    <li> <a href="#presentacion">Sobre Mi</a> </li>
-                    <li> <a href="#">Proyectos</a> </li>
-                    <li> <a href="#">Contacto</a> </li>
-                </ul>
-            </nav>
+            <button class="btn-menu" id="btn-menu"><i class="bi bi-list"></i></button>
+
         </div>
+        <nav id="menu" class="ocultar">
+            <ul class="nav">
+                <li> <a href="#presentacion">Sobre Mi</a> </li>
+                <li> <a href="#">Proyectos</a> </li>
+                <li> <a href="#">Contacto</a> </li>
+            </ul>
+        </nav>
         <div>
             <img class="img-personal" src="imagenes/yocamisa.jpg" alt="">
         </div>
@@ -42,8 +44,31 @@
 
     </header>
 
-    <section>
-        <h3 class="presentacion" id="presentacion"></h3>
+    <section class="aboutme" id="presentacion">
+
+        <img src="imagenes/IMG-20200914-WA0210 (1).jpg" class="aboutme__img" alt="">
+        <div class="aboutme__text">
+            <p>Soy estudiante <span class="resaltado">Universitario en Desarrollo de Aplicaciones
+                    Informaticas</span> de la <span class="resaltado">UNICEN.</span>
+            </p>
+            <p>
+
+                Soy una persona <span class="resaltado">proactiva,</span> con un gran sentido de la <span
+                    class="resaltado">responsabilidad,</span>
+                con vocación de <span class="resaltado">trabajo en equipo</span> y capaz
+                de <span class="resaltado">generar valor agregado (SINERGIA).</span>
+
+            <p>
+                Mi objetivo es adquirir <span class="resaltado">experiencia laboral</span> y consolidarme en un <span
+                    class="resaltado">equipo
+                    de trabajo</span> donde pueda <span class="resaltado">desarrollarme y crecer
+                    profesionalmente.</span>
+
+            </p>
+        </div>
+
+
+
     </section>
 
 
