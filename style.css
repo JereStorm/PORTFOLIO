@@ -132,7 +132,7 @@ body {
   border-radius: 50%;
   /* margin: 100px 80px 0 0; */
   height: 300px;
-  margin: 25px auto 0;
+  margin: 80px auto 0;
 }
 
 .resaltado {
@@ -155,6 +155,26 @@ body {
   display: none;
 }
 
+.curriculum {
+  align-self: flex-start;
+  justify-self: self-end;
+  margin: 70px auto 0px 20px;
+}
+.curriculum a {
+  font-size: 20px;
+  padding: 10px;
+  background-color: var(--negro);
+  border-radius: 5px;
+  color: var(--primario);
+  text-decoration: none;
+  border: 2px solid var(--primario);
+  transition: background-color 0.3s ease;
+  position: fixed;
+}
+.curriculum a:hover {
+  background-color: var(--blanco);
+  color: var(--negro);
+}
 /* --------------- SECCION ABOUT -------------- */
 .aboutme {
   display: flex;
