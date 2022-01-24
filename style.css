@@ -93,7 +93,7 @@ body {
   border-radius: 5px;
   color: var(--blanco);
   text-decoration: none;
-  border-bottom: 1px solid var(--blanco);
+  border-bottom: 1px solid var(--primario);
 }
 
 @media only screen and (min-width: 768px) {
@@ -157,8 +157,8 @@ body {
 
 .curriculum {
   align-self: flex-start;
-  justify-self: self-end;
-  margin: 70px auto 0px 20px;
+  justify-self: end;
+  margin: 90px auto 0px 20px;
 }
 .curriculum a {
   font-size: 20px;
@@ -224,7 +224,7 @@ body {
   }
 }
 
-/* ---------------- SECTION ----------------- */
+/* ---------------- SECTION SKILLS ----------------- */
 
 .skills {
   display: flex;
@@ -267,6 +267,10 @@ body {
   }
   .skills div img {
     width: 120px;
+    transition: width 0.2s ease;
+  }
+  .skills div img:hover {
+    width: 140px;
   }
   .skills__one {
     display: flex;
@@ -280,5 +284,9 @@ body {
     width: 140px;
     margin-bottom: 35px;
     margin-top: 25px;
+    transition: width 0.3s ease;
+  }
+  div .trello img:hover {
+    width: 160px;
   }
 }
