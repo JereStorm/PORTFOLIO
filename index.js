@@ -49,16 +49,17 @@ function carrousel(val){
 
     console.log(src);
 }
+// document.querySelector("#experience").addEventListener('click', ()=>{
+//     window.sr = ScrollReveal()
+//     sr.reveal(".card",{
+//         origin: 'left',
+//         interval: 106,
+//         duration: 2000,
+//         distance: '150%',
+//     })
+// });
 
-function animateImg(){
-    window.sr = ScrollReveal()
-    sr.reveal(".aboutme__img",{
-        origin: 'left',
-        interval: 106,
-        duration: 2000,
-        distance: '150%',
-    })
-}
+
 
 
 

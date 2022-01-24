@@ -40,6 +40,33 @@ body {
 .medio {
   height: 50vh;
 }
+.fixed {
+  position: fixed;
+}
+
+.divisor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 400px;
+  max-height: 100vh;
+  text-align: justify;
+  border-radius: 3px;
+}
+.divisor h2 {
+  font-size: 55px;
+  background-color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .divisor {
+    height: auto;
+  }
+  .divisor h2 {
+    font-size: 90px;
+  }
+}
 
 /* --------------- HEADER ------------------- */
 
@@ -48,7 +75,7 @@ body {
   border-radius: 10px;
   background-image: url(imagenes/layout/codigo.png);
   background-position: top;
-  height: 110vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -59,6 +86,20 @@ body {
   justify-content: space-between;
   align-items: baseline;
 }
+.header__body {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 30px;
+  align-self: center;
+  align-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .header__body {
+    margin-top: 150px;
+  }
+}
+
 .header__title {
   margin: 30px 0 5px 15px;
   align-self: center;
@@ -67,11 +108,13 @@ body {
   padding: 5px;
 }
 .btn-menu {
-  margin: 30px 15px 5px 0;
+  margin: 30px 15px 5px 335px;
   width: 50px;
   height: 50px;
   border-radius: 10px;
   border-style: none;
+
+  position: fixed;
 }
 
 /* ----------------- NAV ------------------- */
@@ -84,7 +127,10 @@ body {
   color: var(--blanco);
   list-style: none;
   justify-content: center;
+  backdrop-filter: blur(10px);
+
   padding: 0px;
+  position: fixed;
 }
 .nav li {
   margin: 10px auto;
@@ -136,17 +182,16 @@ body {
   border-radius: 50%;
   /* margin: 100px 80px 0 0; */
   height: 300px;
-  margin: 80px auto 0;
+  margin: 20px auto 20px;
 }
 
 .resaltado {
   display: inline;
-  width: 90%;
   color: var(--blanco);
   font-size: 20px;
   background-color: black;
   border-radius: 5px;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 
 .presentacion {
@@ -162,7 +207,7 @@ body {
 .curriculum {
   align-self: flex-start;
   justify-self: end;
-  margin: 90px auto 0px 20px;
+  margin: 200px auto 0px 20px;
 }
 .curriculum a {
   font-size: 20px;
@@ -179,6 +224,13 @@ body {
   background-color: var(--blanco);
   color: var(--negro);
 }
+
+@media only screen and (min-width: 768px) {
+  .curriculum {
+    margin-top: 0px;
+  }
+}
+
 /* --------------- SECCION ABOUT -------------- */
 .aboutme {
   display: flex;
@@ -323,15 +375,17 @@ body {
   display: flex;
   justify-self: flex-end;
   justify-content: space-between;
-  margin: 20px 20px;
-  align-self: flex-end;
+  margin: 20px;
+  align-self: center;
 }
 .card .album {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  margin: 55px auto;
+  margin: 0px;
+  padding: 10px;
+  justify-content: center;
+  gap: 30px;
 }
 .card .album button {
   background-color: transparent;
@@ -343,19 +397,16 @@ body {
   cursor: pointer;
 }
 .card img {
-  width: 50%;
+  width: 300px;
+  height: 200px;
+  border-radius: 2px;
 }
 .link a {
   padding: 5px 10px;
   border-radius: 3px;
   color: var(--primario);
 }
-.slider-container {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
-  position: relative;
-  overflow: hidden;
-}
 @media only screen and (min-width: 768px) {
   .experience {
     flex-direction: row;
@@ -364,6 +415,26 @@ body {
   }
   .card {
     margin-top: 100px;
-    width: 45%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    width: 500px;
+    height: 400px;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .card_arm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .link {
+    width: 100%;
   }
 }

@@ -21,36 +21,44 @@
 
 <body>
     <header class="header section">
-        <div class="header__top">
-            <h1 class="header__title">
-                < <span> JS </span> />
-            </h1>
-            <button class="btn-menu" id="btn-menu"><i class="bi bi-list"></i></button>
+        <div>
+            <div class="header__top">
+                <h1 class="header__title">
+                    < <span> JS </span> />
+                </h1>
+                <button class="btn-menu" id="btn-menu"><i class="bi bi-list"></i></button>
 
+            </div>
+            <nav id="menu" class="ocultar">
+                <ul class="nav">
+                    <li> <a href="#presentacion">Sobre Mi</a> </li>
+                    <li> <a href="#skills">Skills</a> </li>
+                    <li> <a href="#experience">Experiencia</a> </li>
+                    <li> <a href="#">Contacto</a> </li>
+                </ul>
+            </nav>
         </div>
-        <nav id="menu" class="ocultar">
-            <ul class="nav">
-                <li> <a href="#presentacion">Sobre Mi</a> </li>
-                <li> <a href="#skills">Skills</a> </li>
-                <li> <a href="#experience">Experiencia</a> </li>
-                <li> <a href="#">Contacto</a> </li>
-            </ul>
-        </nav>
-        <div>
-            <img class="img-personal" src="imagenes/yocamisa.jpg" alt="">
-        </div>
-        <div>
+
+        <div class="header__body">
+
+
+
             <h2 class="text-center resaltado">
-                Hola! mi nombre es Jeremias Storm y soy Desarrollador Web ; )
+                Hola! mi nombre es Jere Storm
             </h2>
-        </div>
-        <div>
-            <h2 id="text" class="frase resaltado">If there is a will there is a way</h2>
+            <img class="img-personal" src="imagenes/yocamisa.jpg" alt="">
+            <h2 class="text-center resaltado">
+                y soy Desarrollador Web
+            </h2>
+
         </div>
         <div class="curriculum">
             <a href="PDF/CV.pdf" target="blank"><i class="bi bi-file-person"></i> Curriculum</a>
         </div>
     </header>
+    <div class="divisor">
+        <h2 id="text" class="frase resaltado">If there is a will there is a way</h2>
+    </div>
 
     <section class="aboutme section" id="presentacion">
         <div class="aboutme__text">
@@ -77,6 +85,11 @@
                     class="resaltado">equipo
                     de trabajo</span> donde pueda <span class="resaltado">desarrollarme y crecer
                     profesionalmente.</span>
+
+            </p>
+            <p>
+                Curso Completo JavaScript
+                <a href="pdf/CertificadoJS.pdf" target="blank">Certificado</a>
 
             </p>
         </div>
@@ -131,32 +144,38 @@
             </div>
         </div>
     </section>
+
     <section class="section bg-dark experience" id="experience">
 
         <article class="card">
 
             <h2>Sistema de Control de Ventas</h2>
 
-            <div class="album slider-container">
-                <button id="btnAnt">
-                    <i class="bi bi-arrow-bar-left"></i>
-                </button>
-                <img id="img" src="imagenes/experience/" alt="">
-                <button id="btnSig">
-                    <i class="bi bi-arrow-bar-right"></i>
-                </button>
+            <div class="card-body">
+                <div class="album slider-container">
+                    <button id="btnAnt">
+                        <i class="bi bi-arrow-bar-left"></i>
+                    </button>
+                    <img id="img" src="imagenes/experience/" alt="">
+                    <button id="btnSig">
+                        <i class="bi bi-arrow-bar-right"></i>
+                    </button>
+                </div>
+                <div class="card_arm">
+                    <ul>
+                        <h3 class="text-center">User Stories:</h3>
+                        <li><i class="bi bi-check-square"></i> Sistema de comentarios</li>
+                        <li><i class="bi bi-check-square"></i> Panel administrador de Users</li>
+                        <li><i class="bi bi-check-square"></i> Sistema protegido ante Injecciones SQL</li>
+                        <li><i class="bi bi-check-square"></i> Perseverancia de la Informacion</li>
+                    </ul>
+                    <div class="link">
+                        <a href="https://jerestorm.github.io/TPE1/" target="blank">Deployment</a>
+                        <a href="https://github.com/JereStorm/TPE1" target="blank">GitHub</a>
+                    </div>
+                </div>
             </div>
-            <ul>
-                <h3 class="text-center">User Stories:</h3>
-                <li>+Sistema de comentarios</li>
-                <li>+Panel administrador de Users</li>
-                <li>+Sistema protegido ante Injecciones SQL</li>
-                <li>+Perseverancia de la Informacion</li>
-            </ul>
-            <div class="link">
-                <a href="https://jerestorm.github.io/TPE1/" target="blank">Deployment</a>
-                <a href="https://github.com/JereStorm/TPE1" target="blank">GitHub</a>
-            </div>
+
 
         </article>
 
