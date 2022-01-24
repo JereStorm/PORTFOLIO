@@ -294,3 +294,60 @@ body {
     transform: rotate(20deg);
   }
 }
+
+/* ------------ SECTION EXPERIENCE -----------------*/
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  min-height: 500px;
+  width: 80%;
+  margin-top: 50px;
+  background-color: #212121;
+  border: 2px solid #333333;
+  text-align: center;
+  color: var(--blanco);
+}
+.card ul {
+  list-style: none;
+  text-align: start;
+  padding: 0px;
+}
+.card ul li {
+  margin-left: 50px;
+}
+.link {
+  display: flex;
+  justify-self: flex-end;
+  justify-content: space-between;
+  margin: 50px 20px;
+  align-self: flex-end;
+}
+.card .album {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.card img {
+  width: 50%;
+}
+.link a {
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: var(--primario);
+}
+@media only screen and (min-width: 768px) {
+  .experience {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .card {
+    margin-top: 100px;
+    width: 45%;
+  }
+}
