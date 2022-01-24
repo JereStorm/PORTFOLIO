@@ -3,17 +3,35 @@
 let btnMenu = document.querySelector("#btn-menu")
 btnMenu.addEventListener("click", mostrarMenu);
 
-function mostrarMenu() {
-    let menu = document.querySelector("#menu");
-    menu.classList.toggle("ocultar")
-}
-
 let textEl = document.querySelector('#text');
 const text = 'If there is a Will there is a Way         ';
 let idx = 1;
 let speed = 150;
 
-writeText()
+let btnSig = document.querySelector("#btnSig").addEventListener('click', ()=>carrousel(1));
+let btnAnt = document.querySelector("#btnAnt").addEventListener('click', ()=>carrousel(-1));;
+let img = document.querySelector("#img");
+
+// tengo que buscar la forma de encontrar la cantidad de imagenes que tiene la card
+
+let arrayImage = [1,2,3];
+let extencion = '.jpeg';
+let src = img.getAttribute('src');
+let counter = 0;
+
+writeText();
+carrousel();
+
+
+if(window.innerWidth>800){
+    animation('.nav','right');
+    animation('.header__title','left');
+    animation('.curriculum a','bottom');
+}
+function mostrarMenu() {
+    let menu = document.querySelector("#menu");
+    menu.classList.toggle("ocultar")
+}
 
 function writeText() {
     textEl.innerText = text.slice(0, idx)
@@ -27,17 +45,7 @@ function writeText() {
     setTimeout(writeText, speed)
 }
 
-let btnSig = document.querySelector("#btnSig").addEventListener('click', ()=>carrousel(1));
-let btnAnt = document.querySelector("#btnAnt").addEventListener('click', ()=>carrousel(-1));;
-let img = document.querySelector("#img");
 
-let arrayImage = [1,2,3];
-let extencion = '.jpeg';
-let src = img.getAttribute('src');
-let counter = 0;
-
-// tengo que buscar la forma de encontrar la cantidad de imagenes que tiene la card
-carrousel();
 function carrousel(val){
 
     if(counter == arrayImage.length){
@@ -49,13 +57,6 @@ function carrousel(val){
 
     console.log(src);
 }
-if(window.innerWidth>800){
-    animation('.nav','right');
-    animation('.header__title','left');
-    animation('.curriculum a','bottom');
-}
-
-
 
 
 
