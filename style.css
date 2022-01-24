@@ -37,6 +37,9 @@ body {
 .bg-transparent {
   background: transparent;
 }
+.medio {
+  height: 50vh;
+}
 
 /* --------------- HEADER ------------------- */
 
@@ -44,7 +47,8 @@ body {
   margin-top: 0px;
   border-radius: 10px;
   background-image: url(imagenes/layout/codigo.png);
-  background-position: center center;
+  background-position: top;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -267,10 +271,10 @@ body {
   }
   .skills div img {
     width: 120px;
-    transition: width 0.2s ease;
+    transition: transform 0.3s ease;
   }
   .skills div img:hover {
-    width: 140px;
+    transform: rotate(20deg);
   }
   .skills__one {
     display: flex;
@@ -284,9 +288,9 @@ body {
     width: 140px;
     margin-bottom: 35px;
     margin-top: 25px;
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease;
   }
   div .trello img:hover {
-    width: 160px;
+    transform: rotate(20deg);
   }
 }
