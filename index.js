@@ -49,15 +49,25 @@ function carrousel(val){
 
     console.log(src);
 }
-// document.querySelector("#experience").addEventListener('click', ()=>{
-//     window.sr = ScrollReveal()
-//     sr.reveal(".card",{
-//         origin: 'left',
-//         interval: 106,
-//         duration: 2000,
-//         distance: '150%',
-//     })
-// });
+if(window.innerWidth>800){
+    animation('.nav','right');
+    animation('.header__title','left');
+    animation('.curriculum a','bottom');
+}
+
+
+
+
+
+function animation (element, orientation){
+    window.sr = ScrollReveal()
+    sr.reveal(element,{
+        origin: orientation,
+        interval: 106,
+        duration: 2000,
+        distance: '150%',
+    })
+};
 
 
 

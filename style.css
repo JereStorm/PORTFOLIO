@@ -131,7 +131,7 @@ body {
   list-style: none;
   justify-content: center;
   backdrop-filter: blur(10px);
-
+  margin-top: 85px;
   padding: 0px;
   position: fixed;
 }
