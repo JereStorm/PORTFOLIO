@@ -323,7 +323,7 @@ body {
   display: flex;
   justify-self: flex-end;
   justify-content: space-between;
-  margin: 50px 20px;
+  margin: 20px 20px;
   align-self: flex-end;
 }
 .card .album {
@@ -331,6 +331,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin: 55px auto;
+}
+.card .album button {
+  background-color: transparent;
+  color: #fff;
+  padding: 1px;
+  font-size: 20px;
+  border: 2px solid var(--blanco);
+
+  cursor: pointer;
 }
 .card img {
   width: 50%;
@@ -339,6 +349,12 @@ body {
   padding: 5px 10px;
   border-radius: 3px;
   color: var(--primario);
+}
+.slider-container {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  position: relative;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .experience {

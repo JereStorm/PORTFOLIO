@@ -27,4 +27,38 @@ function writeText() {
     setTimeout(writeText, speed)
 }
 
+let btnSig = document.querySelector("#btnSig").addEventListener('click', ()=>carrousel(1));
+let btnAnt = document.querySelector("#btnAnt").addEventListener('click', ()=>carrousel(-1));;
+let img = document.querySelector("#img");
+
+let arrayImage = [1,2,3];
+let extencion = '.jpeg';
+let src = img.getAttribute('src');
+let counter = 0;
+
+// tengo que buscar la forma de encontrar la cantidad de imagenes que tiene la card
+carrousel();
+function carrousel(val){
+
+    if(counter == arrayImage.length){
+        counter = 0;
+    }
+    console.log('entre');
+    img.setAttribute('src', src+arrayImage[counter]+extencion);
+    counter++
+
+    console.log(src);
+}
+
+function animateImg(){
+    window.sr = ScrollReveal()
+    sr.reveal(".aboutme__img",{
+        origin: 'left',
+        interval: 106,
+        duration: 2000,
+        distance: '150%',
+    })
+}
+
+
 
