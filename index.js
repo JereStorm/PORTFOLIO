@@ -46,6 +46,7 @@ function writeText() {
 }
 
 
+
 function carrousel(val){
 
     if(counter == arrayImage.length){
@@ -56,6 +57,7 @@ function carrousel(val){
     counter++
 
     console.log(src);
+    setTimeout(carrousel, 4000)
 }
 
 
