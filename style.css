@@ -445,4 +445,18 @@ body {
   .link {
     width: 100%;
   }
+  .miniskills img {
+    width: 30px;
+    height: 60%;
+    transition: width 0.3s ease;
+  }
+  .miniskills img:hover {
+    width: 35px;
+  }
+  .miniskills {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
 }

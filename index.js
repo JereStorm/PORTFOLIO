@@ -14,7 +14,7 @@ let img = document.querySelector("#img");
 
 // tengo que buscar la forma de encontrar la cantidad de imagenes que tiene la card
 
-let arrayImage = [1,2,3];
+let arrayImage = [0,1,2];
 let extencion = '.jpeg';
 let src = img.getAttribute('src');
 let counter = 0;
@@ -45,19 +45,40 @@ function writeText() {
     setTimeout(writeText, speed)
 }
 
+img.setAttribute('src', src+arrayImage[counter]+extencion);
 
 
-function carrousel(val){
+function carrousel(val = 1){
 
+    
     if(counter == arrayImage.length){
         counter = 0;
     }
-    console.log('entre');
-    img.setAttribute('src', src+arrayImage[counter]+extencion);
-    counter++
+    
+    if(counter == -1){
+        counter = (arrayImage.length - 1)
+    }
 
-    console.log(src);
-    setTimeout(carrousel, 4000)
+    counter = counter + val;
+    if(counter == arrayImage.length){
+        counter = 0;
+    }
+    if(counter == -1){
+        counter = (arrayImage.length - 1)
+    }
+
+
+    console.log(src+arrayImage[counter]+extencion);
+
+    img.setAttribute('src', src+arrayImage[counter]+extencion);
+
+
+    
+    
+    
+
+
+    // setTimeout(carrousel, 4000)
 }
 
 
