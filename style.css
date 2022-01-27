@@ -210,6 +210,44 @@ body {
 .ocultar {
   display: none;
 }
+.botonera {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 80vh auto 0px;
+  align-self: flex-end;
+  justify-self: flex-end;
+  position: fixed;
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.3s ease;
+}
+.botonera:hover {
+  backdrop-filter: blur(10px);
+}
+.agenda {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 50px;
+}
+.desactive {
+  display: none;
+}
+.botonera button {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.botonera img {
+  width: 50px;
+  transition: width 0.3s ease;
+}
+.botonera img:hover {
+  width: 55px;
+}
 
 .curriculum {
   align-self: flex-start;

@@ -3,6 +3,9 @@
 let btnMenu = document.querySelector("#btn-menu")
 btnMenu.addEventListener("click", mostrarMenu);
 
+let contact = document.querySelector("#contacto")
+contact.addEventListener("click", mostrarContact);
+
 let textEl = document.querySelector('#text');
 const text = 'If there is a Will there is a Way         ';
 let idx = 1;
@@ -31,6 +34,10 @@ if(window.innerWidth>800){
 function mostrarMenu() {
     let menu = document.querySelector("#menu");
     menu.classList.toggle("ocultar")
+}
+function mostrarContact() {
+    let iconos = document.querySelector("#iconos");
+    iconos.classList.toggle("desactive");
 }
 
 function writeText() {
