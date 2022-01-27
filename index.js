@@ -22,19 +22,23 @@ let extencion = '.jpeg';
 let src = img.getAttribute('src');
 let counter = 0;
 
+img.setAttribute('src', src+arrayImage[counter]+extencion);
+
+
 writeText();
 carrousel();
-
 
 if(window.innerWidth>800){
     animation('.nav','right');
     animation('.header__title','left');
     animation('.curriculum a','bottom');
 }
+
 function mostrarMenu() {
     let menu = document.querySelector("#menu");
     menu.classList.toggle("ocultar")
 }
+
 function mostrarContact() {
     let iconos = document.querySelector("#iconos");
     iconos.classList.toggle("desactive");
@@ -52,12 +56,9 @@ function writeText() {
     setTimeout(writeText, speed)
 }
 
-img.setAttribute('src', src+arrayImage[counter]+extencion);
-
 
 function carrousel(val = 1){
 
-    
     if(counter == arrayImage.length){
         counter = 0;
     }
@@ -67,6 +68,7 @@ function carrousel(val = 1){
     }
 
     counter = counter + val;
+
     if(counter == arrayImage.length){
         counter = 0;
     }
@@ -74,21 +76,8 @@ function carrousel(val = 1){
         counter = (arrayImage.length - 1)
     }
 
-
-    console.log(src+arrayImage[counter]+extencion);
-
     img.setAttribute('src', src+arrayImage[counter]+extencion);
-
-
-    
-    
-    
-
-
-    // setTimeout(carrousel, 4000)
 }
-
-
 
 function animation (element, orientation){
     window.sr = ScrollReveal()
@@ -100,13 +89,4 @@ function animation (element, orientation){
     })
 };
 
-
-
-const a = [1,2,3]
-const [n] = a;
-console.log(typeof(42));
-
-a[100] = 1;
-
-console.log(a.length);
 
