@@ -102,5 +102,11 @@ function animation (element, orientation){
 
 
 
+const a = [1,2,3]
+const [n] = a;
+console.log(typeof(42));
 
+a[100] = 1;
+
+console.log(a.length);
 
