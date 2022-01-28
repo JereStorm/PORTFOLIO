@@ -97,6 +97,10 @@ body {
   align-self: center;
   align-content: center;
 }
+.logo-link {
+  color: black;
+  text-decoration: none;
+}
 @media only screen and (min-width: 768px) {
   .header__body {
     margin-top: 150px;
@@ -261,9 +265,9 @@ body {
 .curriculum a {
   font-size: 20px;
   padding: 10px;
-  background-color: var(--negro);
+  background-color: var(--primario);
   border-radius: 5px;
-  color: var(--primario);
+  color: var(--negro);
   text-decoration: none;
   border: 2px solid var(--primario);
   transition: background-color 0.3s ease;
@@ -432,6 +436,12 @@ body {
   margin: 20px;
   align-self: center;
 }
+.link a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--primario);
+  color: #191919;
+}
 .card .album {
   display: flex;
   align-items: center;
@@ -455,11 +465,7 @@ body {
   height: 200px;
   border-radius: 2px;
 }
-.link a {
-  padding: 5px 10px;
-  border-radius: 3px;
-  color: var(--primario);
-}
+
 .miniskills {
   display: flex;
   justify-content: space-around;
