@@ -146,18 +146,23 @@ body {
   padding: 0px;
   position: fixed;
 }
+.nav-item {
+  backdrop-filter: blur(10px);
+}
 .nav li {
-  margin: 10px auto;
+  margin: 0px auto;
+  backdrop-filter: blur(10px);
+  padding: 10px 0px;
+  border-radius: 5px;
+  border-bottom: 1px solid var(--primario);
 }
 .nav li a {
   margin: 10px auto;
   font-size: 20px;
-  backdrop-filter: blur(10px);
   padding: 10px;
   border-radius: 5px;
   color: var(--blanco);
   text-decoration: none;
-  border-bottom: 1px solid var(--primario);
 }
 
 @media only screen and (min-width: 768px) {
@@ -261,6 +266,8 @@ body {
   align-self: flex-start;
   justify-self: end;
   margin: 150px auto 0px 20px;
+}
+.curriculum li {
 }
 .curriculum a {
   font-size: 20px;
