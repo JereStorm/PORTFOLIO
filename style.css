@@ -77,6 +77,9 @@ body {
   margin-top: 0px;
   border-radius: 10px;
   background-image: url(imagenes/layout/codigo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   background-position: top;
   height: 90vh;
   display: flex;
