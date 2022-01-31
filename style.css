@@ -46,6 +46,12 @@ body {
 .fixed {
   position: fixed;
 }
+.d-hidden {
+  visibility: hidden;
+}
+.d-none {
+  display: none;
+}
 
 .divisor {
   display: flex;
@@ -497,13 +503,20 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 #contenedor-interno {
-  width: 700px;
-  height: 500px;
+  width: 80%;
+  height: 50%;
   border: 2px solid #f3f3f3;
   padding: 2px;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
+  background-color: rgba(0, 0, 0, 0.794);
+}
+#contenedor-interno img {
+  width: 90%;
+  height: 90%;
+  object-fit: scale-down;
 }
 #contenedor-interno button {
   cursor: pointer;
@@ -526,6 +539,12 @@ body {
   left: 0;
 }
 @media only screen and (min-width: 768px) {
+  #contenedor-interno {
+    height: 90%;
+  }
+  #contenedor-interno img {
+    object-fit: cover;
+  }
   .experience {
     flex-direction: row;
     justify-content: space-around;
