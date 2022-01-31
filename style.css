@@ -85,7 +85,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
-  height: 110vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -293,7 +293,10 @@ body {
 
 @media only screen and (min-width: 768px) {
   .curriculum {
-    margin-top: 0px;
+    margin-top: -30px;
+  }
+  .img-personal {
+    height: 350px;
   }
 }
 
