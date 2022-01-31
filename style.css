@@ -13,8 +13,6 @@ html {
 }
 body {
   font-family: "IBM Plex Sans Hebrew", sans-serif;
-  background-image: url(imagenes/layout/white-back.jpg);
-  background-position: right;
 }
 .no-m {
   margin: 0;
@@ -87,7 +85,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
-  height: 90vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -303,13 +301,16 @@ body {
 .aboutme {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-
   gap: 20px;
-  background-color: var(--blanco);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 .aboutme__img {
   border-radius: 8px;
@@ -322,6 +323,7 @@ body {
   line-height: 30px;
   text-align: center;
 }
+
 .frase {
   font-size: 25px;
   font-family: var(--fuenteParrafos);
@@ -337,8 +339,9 @@ body {
     margin-top: 30px;
   }
   .aboutme {
-    flex-direction: row;
-    justify-content: space-around;
+    background-image: url(imagenes/layout/fondo_blanco.jpg);
+    justify-content: center;
+    align-items: flex-end;
   }
   .aboutme__img {
     border-radius: 8px;
@@ -346,7 +349,7 @@ body {
     margin-left: 20px;
   }
   .aboutme__text {
-    justify-content: center;
+    justify-content: flex-end;
     font-family: var(--fuenteParrafos);
     width: 60%;
     line-height: 30px;
@@ -426,6 +429,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 110vh;
 }
 .card {
   min-height: 500px;
@@ -503,9 +507,10 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 #contenedor-interno {
-  width: 80%;
+  width: 90%;
   height: 50%;
-  border: 2px solid #f3f3f3;
+  border-left: 2px solid #585858;
+  border-right: 2px solid #585858;
   padding: 2px;
   display: flex;
   justify-content: center;
