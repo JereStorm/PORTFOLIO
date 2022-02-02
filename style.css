@@ -558,6 +558,17 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
   }
+  #galeria img {
+    cursor: pointer;
+  }
+  #contenedor-interno button {
+    transition: all 0.3s ease;
+    border-radius: 3px;
+  }
+  #contenedor-interno button:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+  }
   .card {
     margin-top: 100px;
     width: 90%;
@@ -577,7 +588,7 @@ body {
   .card_arm {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .link {
     width: 100%;
