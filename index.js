@@ -15,18 +15,24 @@ let btnCierra = document.querySelector("#btn-cierra");
 let btnAdelanta = document.querySelector("#btn-adelanta");
 let btnRetrocede = document.querySelector("#btn-retrocede");
 let imagenes = document.querySelectorAll('#galeria img');
-console.log(imagenes);
 let lightBox = document.querySelector('#contenedor-principal');
 let imgActiva = document.querySelector('#img-activa');
 let indiceImg = 0;
 
+btnAdelanta.addEventListener('click', adelantaImagen);
+btnRetrocede.addEventListener('click', retrocedeImagen);
+
+imagenes.forEach(imagen => {
+    imagen.addEventListener('click', abreLightBox);
+});
+
+writeText();
 //ABRIR LIGHT BOX
 
 const abreLightBox = (e) => {
     imgActiva.src = e.target.src;
     lightBox.style.display = 'flex';
     indiceImg = Array.from(imagenes).indexOf(e.target);
-    console.log('indiceImg: ',indiceImg);
 };
 
 // CERRAR LIGHTBOX
@@ -54,28 +60,6 @@ const retrocedeImagen = () => {
     imgActiva.src = imagenes[indiceImg - 1].src;
     indiceImg--;
 };
-btnAdelanta.addEventListener('click', adelantaImagen);
-btnRetrocede.addEventListener('click', retrocedeImagen);
-imagenes.forEach(imagen => {
-    imagen.addEventListener('click', abreLightBox);
-});
-
-// let btnSig = document.querySelector("#btnSig").addEventListener('click', ()=>carrousel(1));
-// let btnAnt = document.querySelector("#btnAnt").addEventListener('click', ()=>carrousel(-1));;
-// let img = document.querySelector("#img");
-
-// tengo que buscar la forma de encontrar la cantidad de imagenes que tiene la card
-
-// let arrayImage = [0,1,2];
-// let extencion = '.jpeg';
-// let src = img.getAttribute('src');
-// let counter = 0;
-
-// img.setAttribute('src', src+arrayImage[counter]+extencion);
-
-
-writeText();
-// carrousel();
 
 if(window.innerWidth>800){
     animation('.nav','right');
@@ -104,29 +88,6 @@ function writeText() {
 
     setTimeout(writeText, speed)
 }
-
-
-// function carrousel(val = 1){
-
-//     if(counter == arrayImage.length){
-//         counter = 0;
-//     }
-    
-//     if(counter == -1){
-//         counter = (arrayImage.length - 1)
-//     }
-
-//     counter = counter + val;
-
-//     if(counter == arrayImage.length){
-//         counter = 0;
-//     }
-//     if(counter == -1){
-//         counter = (arrayImage.length - 1)
-//     }
-
-//     img.setAttribute('src', src+arrayImage[counter]+extencion);
-// }
 
 function animation (element, orientation){
     window.sr = ScrollReveal()
