@@ -19,14 +19,8 @@ let lightBox = document.querySelector('#contenedor-principal');
 let imgActiva = document.querySelector('#img-activa');
 let indiceImg = 0;
 
-btnAdelanta.addEventListener('click', adelantaImagen);
-btnRetrocede.addEventListener('click', retrocedeImagen);
-
-imagenes.forEach(imagen => {
-    imagen.addEventListener('click', abreLightBox);
-});
-
 writeText();
+
 //ABRIR LIGHT BOX
 
 const abreLightBox = (e) => {
@@ -34,6 +28,10 @@ const abreLightBox = (e) => {
     lightBox.style.display = 'flex';
     indiceImg = Array.from(imagenes).indexOf(e.target);
 };
+
+imagenes.forEach(imagen => {
+    imagen.addEventListener('click', abreLightBox);
+});
 
 // CERRAR LIGHTBOX
 
@@ -60,6 +58,9 @@ const retrocedeImagen = () => {
     imgActiva.src = imagenes[indiceImg - 1].src;
     indiceImg--;
 };
+
+btnAdelanta.addEventListener('click', adelantaImagen);
+btnRetrocede.addEventListener('click', retrocedeImagen);
 
 if(window.innerWidth>800){
     animation('.nav','right');
